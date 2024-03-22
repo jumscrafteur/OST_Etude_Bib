@@ -1,0 +1,58 @@
+1) Contexte : Un ou deux paragraphes d’introduction au domaine abordé et son intérêt, à replacer dans le contexte de l’époque de l’écriture de l’article.
+
+Pour bien comprendre le contexte dans lequel l'article a été écrit, il est essentiel de se plonger dans le paysage technologique et scientifique de l'époque, vers 2017.
+À cette époque, nous étions déjà profondément plongés dans l'ère du big data. Les entreprises et les organisations collectaient d'énormes volumes de données à un rythme sans précédent, à partir de diverses sources telles que les médias sociaux, les transactions en ligne, les appareils IoT (Internet des objets) et bien d'autres. Ces données étaient considérées comme une ressource précieuse, contenant des informations exploitables qui pouvaient conduire à des perspectives commerciales significatives, à condition qu'elles puissent être analysées de manière efficace et efficiente.
+
+Dans ce contexte, les bases de données relationnelles étaient omniprésentes. Elles constituaient le principal moteur de stockage des données dans de nombreuses entreprises, offrant une structure organisée et un accès rapide aux données structurées. Toutefois, à mesure que la quantité de données augmentait, les bases de données relationnelles étaient confrontées à des problèmes de performance et d'évolutivité. Les opérations analytiques complexes, telles que les calculs matriciels nécessaires à l'apprentissage automatique et à d'autres types d'analyses avancées, n'étaient pas bien adaptées aux bases de données relationnelles traditionnelles.
+
+Parallèlement, le domaine de l'analyse des données évoluait rapidement. Les entreprises cherchaient à exploiter tout le potentiel de leurs données pour prendre des décisions plus éclairées, prévoir les tendances du marché, améliorer les produits et les services, et bien d'autres applications. Cela a conduit à une demande croissante d'outils et de techniques pour effectuer des analyses avancées sur de grands ensembles de données, ce qui incluait la capacité d'effectuer des opérations de calcul matriciel à grande échelle.
+
+L'article est donc arrivé à un moment critique où il devenait de plus en plus évident que les bases de données relationnelles devaient évoluer pour répondre aux exigences croissantes de l'analyse moderne des données. En proposant des solutions pour intégrer efficacement les opérations de calcul matriciel dans ces systèmes, les auteurs ont cherché à répondre à un besoin urgent de l'industrie et de la recherche, ouvrant la voie à de nouvelles opportunités d'innovation et de progrès dans le domaine de la gestion et de l'analyse des données.
+
+2) Problématique : Un ou deux paragraphes expliquant la problématique qui a été abordée et que l’article cherche à résoudre.
+
+Au moment de la rédaction de l'article en 2017, les bases de données relationnelles étaient largement utilisées pour stocker et interroger des données structurées dans de nombreux domaines, allant du commerce électronique à la finance en passant par la santé. Cependant, ces bases de données étaient généralement optimisées pour les opérations de requête SQL traditionnelles, telles que la sélection, la mise à jour et la suppression de données, et n'étaient pas bien adaptées pour effectuer efficacement des opérations de calcul matriciel, essentielles dans des domaines tels que l'apprentissage automatique, l'analyse de données et la simulation.
+
+Le principal problème abordé par les auteurs était donc le suivant : comment surmonter les limites des bases de données relationnelles pour permettre l'exécution efficace d'opérations de calcul matriciel sur de grands ensembles de données ? Cette question soulève plusieurs défis majeurs :
+
+Performance : Les opérations matricielles, telles que la multiplication ou l'inversion de matrices, sont des opérations à forte intensité de calcul qui nécessitent des algorithmes et des structures de données optimisés pour une performance maximale. Les bases de données relationnelles traditionnelles ne sont pas conçues pour effectuer ces opérations efficacement, ce qui peut entraîner des temps de traitement excessifs, en particulier pour les grands ensembles de données.
+
+Évolutivité : Avec l'augmentation constante du volume de données dans de nombreux domaines, il est crucial que les solutions proposées soient évolutives, c'est-à-dire qu'elles puissent traiter efficacement de grandes quantités de données sans compromettre les performances. Les bases de données relationnelles doivent être en mesure de répartir les calculs matriciels sur plusieurs nœuds afin de maintenir des temps de réponse acceptables, même avec des ensembles de données massifs.
+
+Intégration : Un autre défi consiste à intégrer de manière transparente les opérations de calcul matriciel dans l'écosystème existant des bases de données relationnelles. Il est essentiel que les utilisateurs puissent effectuer ces opérations à l'aide d'outils et de langages familiers, tels que SQL, sans avoir à apprendre de nouveaux langages ou à utiliser des systèmes externes.
+
+En résumé, le problème abordé par les auteurs était de trouver des solutions permettant aux bases de données relationnelles de gérer efficacement les opérations de calcul matriciel, tout en garantissant des performances élevées, une grande évolutivité et une intégration transparente avec les outils existants. Cette question était cruciale pour permettre aux bases de données relationnelles de rester pertinentes et compétitives dans un paysage de données en constante évolution.
+
+3) Apports scientifiques principaux de l’article : Décrire de manière simple les avancées proposées dans l’article.
+
+Les auteurs de l'article ont présenté plusieurs avancées significatives dans le domaine de la gestion et de l'analyse des données, en se concentrant sur l'amélioration des performances des bases de données relationnelles pour le traitement des opérations de calcul matriciel. Voici un aperçu de ces avancées :
+
+Intégration des opérations matricielles :
+Les bases de données relationnelles traditionnelles ne sont pas conçues pour exécuter efficacement des opérations de calcul matriciel, ce qui peut limiter leur utilité dans des domaines tels que l'apprentissage automatique et l'analyse de données. Les auteurs ont proposé des méthodes innovantes pour intégrer directement ces opérations dans le moteur de traitement des requêtes de la base de données, ce qui permet aux utilisateurs d'effectuer des opérations matricielles complexes à l'aide du langage SQL standard, sans avoir besoin d'outils ou de langages externes.
+
+Optimisation des performances :
+Une grande partie de l'article est consacrée à l'optimisation des performances des opérations matricielles dans les bases de données relationnelles. Les auteurs ont développé des techniques pour stocker efficacement les données matricielles, les rendre accessibles pour les opérations de calcul et organiser ces opérations de manière à minimiser le temps nécessaire à leur exécution. Ces optimisations ont considérablement amélioré la vitesse et l'efficacité des calculs matriciels, même sur de grands ensembles de données.
+
+Évolutivité :
+Un autre aspect important des avancées proposées concerne l'évolutivité, c'est-à-dire la capacité à traiter efficacement les calculs matriciels sur de grands ensembles de données répartis sur plusieurs nœuds d'un système de base de données. Les auteurs ont étudié des techniques de distribution des calculs en parallèle, exploitant ainsi les capacités de traitement distribué des systèmes de base de données modernes. Cette approche a permis de gérer efficacement des données à grande échelle tout en maintenant des performances élevées.
+
+En combinant ces avancées, les auteurs ont réussi à transformer les bases de données relationnelles en plateformes plus polyvalentes pour l'analyse avancée des données, ouvrant de nouvelles possibilités pour l'utilisation de ces systèmes dans des domaines où les opérations matricielles sont courantes. Ces avancées ont non seulement enrichi le domaine de la gestion des données, mais ont également eu un impact significatif sur la manière dont les chercheurs et les praticiens abordent l'analyse des données à grande échelle, ouvrant la voie à de nouvelles innovations et découvertes dans ce domaine.
+
+4) Impacts de l’article : Rendre compte de l’apport dans la littérature ou dans les technologies actuelles des avancées proposées par l’article.
+
+Recherche universitaire :
+L'article a eu un impact significatif dans le domaine de la recherche universitaire sur la gestion des données et l'analyse. En introduisant des méthodes innovantes pour améliorer les performances des bases de données relationnelles dans le traitement des opérations matricielles, les auteurs ont ouvert de nouvelles voies de recherche pour les universitaires et les chercheurs intéressés par l'amélioration des systèmes de gestion des données. Les techniques proposées ont suscité un intérêt considérable dans la communauté universitaire, stimulant de nouvelles études et travaux visant à étendre et améliorer les approches existantes.
+
+Industrie des technologies de l'information :
+L'impact de l'article s'est également fait sentir dans le secteur des technologies de l'information, où les entreprises sont constamment à la recherche de moyens d'optimiser le traitement et l'analyse de leurs vastes ensembles de données. Les techniques proposées ont offert aux entreprises une solution pratique pour exploiter pleinement leurs infrastructures de données existantes, évitant ainsi d'investir dans de nouveaux systèmes ou logiciels spécialisés. Les entreprises ont ainsi pu réaliser des analyses plus complexes et plus rapides, ce qui leur a permis de prendre des décisions plus éclairées et de bénéficier d'avantages concurrentiels accrus.
+
+Applications pratiques :
+Les avancées introduites par l'article ont eu un impact tangible sur divers domaines d'application, tels que la finance, les soins de santé, le marketing et bien d'autres. En permettant des analyses plus rapides et plus précises sur de grands ensembles de données, les techniques proposées ont facilité le développement de modèles prédictifs plus fiables, la découverte de tendances et de modèles cachés, et la prise de décisions plus éclairées dans divers contextes commerciaux. . Ces applications pratiques ont permis aux entreprises d'améliorer leur efficacité opérationnelle, d'optimiser leurs processus commerciaux et de mieux répondre aux besoins et aux attentes de leurs clients.
+
+En résumé, l'article a laissé une marque significative à la fois dans la recherche universitaire et dans l'industrie de la technologie des données, en offrant des solutions innovantes pour améliorer les performances et les capacités des bases de données relationnelles dans le traitement des opérations matricielles. Ces avancées ont eu un impact réel sur la façon dont les entreprises gèrent et analysent leurs données à grande échelle, ouvrant la voie à de nouvelles possibilités d'innovation et de progrès dans le domaine de l'analyse des données.
+
+5) Analyse critique du travail proposé : - Proposer une définition de l’éthique des objectifs, c’est-à-dire, quels sont les problèmes éthiques
+du thème de recherche abordé par l’article
+                                         - Évaluer l’intégrité du protocole de recherche, c’est-à-dire, dans quel sens l’article suit un protocole de recherche.
+
+
