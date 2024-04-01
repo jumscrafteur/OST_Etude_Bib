@@ -77,99 +77,63 @@ Auteur(s)\\~\\
 
 \pagenumbering{arabic} 
 \section{Contexte / Introduction}
-Voici une première section. Vous pouvez faire des citations en utilisant la commande \textbackslash\texttt{cite}. Par exemple \cite{DH76}.
 
-Les informations de publication concernant le papier cité sont à placer dans un fichier \texttt{.bib}. Dans ce template, il s'agit du fichier \texttt{bibliographie.bib}.
+\paragraph{}
+Afin de comprendre au mieux l’article et le contexte dans lequel il a été écrit,  il est important de se plonger dans le paysage technologique et scientifique vers 2017 : 
 
-Ces informations peuvent être obtenues sur le web, notamment ici : 
-\begin{center}
-\url{https://scholar.google.fr/}
-\end{center}
+À ce moment-là, nous avions déjà pleinement embrassé l'ère du Big Data. Les entreprises et les institutions recueillaient de vastes quantités de données à un rythme jamais vu, provenant de diverses sources, notamment les médias sociaux, le commerce en ligne, les gadgets de l'Internet des objets (IoT), et bien d'autres encore. Si elles étaient examinées correctement et efficacement, ces données étaient considérées comme une ressource précieuse avec des informations exploitables qui pouvaient donner des indications importantes pour l'entreprise. Les bases de données relationnelles étaient largement utilisées dans ce contexte. Pour de nombreuses entreprises, elles servaient de principal moteur de stockage des données, fournissant des données structurées avec une structure rapide et ordonnée.
 
+Toutefois, les bases de données relationnelles ont connu des problèmes d'évolutivité et de performance à mesure que les volumes de données augmentaient. Les bases de données relationnelles conventionnelles n'étaient pas bien adaptées aux procédures analytiques complexes, telles que les calculs matriciels nécessaires à l'apprentissage automatique et à d'autres formes d'analyse avancée.
 
-Pour ce faire :
-\begin{enumerate}
-\item chercher le nom de l'article,
-\item cliquez sur les guillemets,
-\item puis sur BibTeX,
-\item copier l'intégralité du texte dans le fichier \texttt{bibliographie.bib},
-\item modifier la clé,
-\item dans votre fichier \texttt{rapport.tex}, utilisez cette clé pour citer le papier.
-\end{enumerate} 
+L’article a donc été publié à un moment charnière où il devenait de plus en plus évident que les bases de données relationnelles devaient changer pour répondre aux besoins croissants de l'analyse des données contemporaines. Les auteurs ont cherché à combler une lacune critique dans l'industrie et la recherche en proposant des stratégies pour incorporer efficacement des opérations de calcul matriciel dans ces systèmes. Cela a ouvert de nouvelles voies pour l'innovation et le progrès dans la gestion et l'analyse des données.
 
-\underline{Exemple :} New directions in Cryptography, de Diffie et Hellman
-
-\begin{enumerate}
-\item La recherche : \url{https://scholar.google.fr/scholar?hl=fr&as_sdt=0%2C5&q=new+directions+in+cryptography&btnG=&oq=New+directions+in+cryptography}
-\item L'entrée BibTeX : \url{https://scholar.googleusercontent.com/scholar.bib?q=info:zhumlNGssTEJ:scholar.google.com/&output=citation&scisig=AAGBfm0AAAAAXJH2ZyWHII7hxbyh6hti-poxCXmdN6Bc&scisf=4&ct=citation&cd=-1&hl=fr&scfhb=1}
-\item Ici, la clé par défaut est \texttt{diffie1976new}, que je modifie en \texttt{DH76}. 
-\item Pour citer ce papier, dans \texttt{rapport.tex}, j'utilise la commande \textbackslash\texttt{cite}\{\texttt{DH76}\}
-\end{enumerate}
-
-
-
-Vous pouvez aussi mettre des références en URL en pied de page\footnote{Il suffit d'utiliser la commande \textbackslash\texttt{footnote} et d'inclure votre URL à l'aide de \textbackslash\texttt{footnote} : \url{https://www.latex-project.org/} ou de \textbackslash\texttt{href} : \href{https://www.latex-project.org/}{même lien}.} (mais c'est moins propre que \textbackslash\texttt{cite}).
- 
-
-Attention, les compilations \LaTeX et BibTeX peuvent être... ``capricieuses''. Je vous recommande de suivre cet ordre :
-\begin{enumerate}
-\item Compilation \LaTeX{} : \texttt{pdflatex -synctex=1 --shell-escape -interaction=nonstopmode rapport.tex}
-\item Compilation BibTeX : \texttt{bibtex rapport.aux}
-\item Compilation \LaTeX{}
-\item Compilation \LaTeX{}
-\end{enumerate}
-Ou plus simplement, utilisez le \texttt{Makefile} fourni.
 
 \clearpage 
 \section{Problématique}
 
-\subsection{Une première sous-partie}
 \paragraph{}
-Un premier paragraphe...
-\paragraph{}
-Un second...
+Les bases de données relationnelles étaient largement utilisées dans divers secteurs, notamment le commerce électronique, la finance et la santé, pour stocker et interroger des données structurées au moment de la rédaction de cet article en 2017.
 
-\subsection{Une seconde sous-partie}
-\paragraph{Inclusion d'images/screenshot} \textcolor{blue}{$\leftarrow$ on peut donner des titres aux paragraphes :)} 
+Cependant, ces bases de données n'étaient pas bien adaptées à l'exécution rapide d'opérations de calcul matriciel, qui sont cruciales dans des domaines tels que l'apprentissage automatique, l'analyse de données et la simulation. Au lieu de cela, ces bases de données étaient principalement conçues pour des opérations de requête SQL standard, telles que le choix, la mise à jour et la suppression de données.
 
-Dans ce paragraphe, on va inclure une petite image (centrée) :
+La question abordée par les créateurs est donc la suivante : 
 
-\begin{figure}[h]
-\centering
-\includegraphics[scale=.5]{images/euler.jpg}
-\caption{\label{euler}Avec une légende :)}
-\end{figure}
-
-Et plus loin on peut même faire (et simplement) référence à la Figure \ref{euler} page \pageref{euler}.
-
-Les formules de maths sont entre \$ comme ceci $\exp^{i\pi} + 1 = 0$ ou encore entre \$\$ pour les centrer : $$\sum_{n=1}^{+\infty} \frac{1}{n^2} = \frac{\pi^2}{6}.$$
-
-On peut également utiliser un environnement dédié :
-
-\begin{equation}
-\label{eq:zsurpz}
-\mathbb{Z}/p\mathbb{Z} = \left\lbrace 0, 1, \ldots, p-1  \right\rbrace
-\end{equation}
-
-Et même aligner les équations simplement et proprement avec un autre environnement :
-
-\begin{eqnarray}
-t &=& a+b+c\\
-&=& d+e \\
-&=& z^{x\times y}\label{eq:ici}\\
-&=& \left(\frac{\delta + \omega}{\tau}\right)
-\end{eqnarray}
-
-Et faire références à ces équations \eqref{eq:zsurpz} et \eqref{eq:ici}.
+\begin{center}
+	\textbf{
+		Comment surmonter les limites des bases de données relationnelles pour permettre l'exécution efficace d'opérations de calcul matriciel sur de grands ensembles de données ?
+	}
+\end{center}
 
 \clearpage 
 \section{Apports scientifiques principaux de l’article}
-\subsection{Sous-section encore...}
-\subsection{Et encore...}
 
+Les auteurs de l'article ont présenté plusieurs avancées significatives dans le domaine de la gestion et de l'analyse des données, en se concentrant sur l'amélioration des performances des bases de données relationnelles pour le traitement des opérations de calcul matriciel. Voici un aperçu simple mais détaillé de ces avancées :
+
+\subsection{Intégration des opérations matricielles}
+Les bases de données relationnelles traditionnelles ne sont pas conçues pour exécuter efficacement des opérations de calcul matriciel, ce qui peut limiter leur utilité dans des domaines tels que l'apprentissage automatique et l'analyse de données. Les auteurs ont proposé des méthodes innovantes pour intégrer directement ces opérations dans le moteur de traitement des requêtes de la base de données, ce qui permet aux utilisateurs d'effectuer des opérations matricielles complexes à l'aide du langage SQL standard, sans avoir besoin d'outils ou de langages externes.
+
+\subsection{Optimisation des performances}
+Une grande partie de l'article est consacrée à l'optimisation des performances des opérations matricielles dans les bases de données relationnelles. Les auteurs ont développé des techniques pour stocker efficacement les données matricielles, les rendre accessibles pour les opérations de calcul et organiser ces opérations de manière à minimiser le temps nécessaire à leur exécution. Ces optimisations ont considérablement amélioré la vitesse et l'efficacité des calculs matriciels, même sur de grands ensembles de données.
+
+\subsection{Évolutivité}
+L’évolutivité est la capacité à traiter efficacement de gros calculs matriciels sur de vastes ensembles de données réparties sur plusieurs parties d'un système de base de données. Les auteurs ont examiné comment distribuer ces calculs en parallèle (simultané), ce qui utilise les capacités de traitement réparti des systèmes de base de données actuels. Cela a permis de gérer de grandes quantités de données tout en maintenant de bonnes performances.
+
+\paragraph{}
+En combinant ces avancées, les auteurs ont réussi à transformer les bases de données relationnelles en plateformes plus polyvalentes pour l'analyse avancée des données, ouvrant de nouvelles possibilités pour l'utilisation de ces systèmes dans des domaines où les opérations matricielles sont courantes. Ces avancées ont non seulement enrichi le domaine de la gestion des données, mais ont également eu un impact significatif sur la manière dont les chercheurs et les praticiens abordent l'analyse des données à grande échelle, ouvrant la voie à de nouvelles innovations et découvertes dans ce domaine.
 
 \clearpage 
 \section{Impacts de l'article}
+
+L'article a eu un impact significatif dans le domaine de la recherche universitaire sur la gestion des données et l'analyse. En introduisant des méthodes innovantes pour améliorer les performances des bases de données relationnelles dans le traitement des opérations matricielles, les auteurs ont ouvert de nouvelles voies de recherche pour les universitaires et les chercheurs intéressés par l'amélioration des systèmes de gestion des données. Les techniques proposées ont suscité un intérêt considérable dans la communauté universitaire, stimulant de nouvelles études et travaux visant à étendre et améliorer les approches existantes. Avec par exemple,  « Efficient Distributed Matrix Operations in Relational Databases » qui se base sur les avancées de l’article ou encore « Scalable Data Analytics Using Relational Database Systems » qui utilise les concepts de l’article pour optimiser les méthodes avancées d’analyses de données.
+
+Les avancées introduites par l'article ont eu un impact significatif et tangible sur divers domaines d'application, notamment la finance, les soins de santé, le marketing et bien d’autres. Les implications pratiques de ces avancées sont multiples et touchent de nombreux aspects des opérations commerciales et des services aux clients. Voici quelques exemples de ces applications pratiques :
+
+\begin{enumerate}[label={-}]
+	\item \textbf{Finance :} Dans le domaine de la finance, les techniques avancées de traitement matriciel sur les bases de données relationnelles ont permis d'améliorer la modélisation des risques financiers, la détection de fraudes, l'optimisation des portefeuilles d'investissement et la prévision des tendances du marché. Les institutions financières peuvent ainsi prendre des décisions plus éclairées et gérer plus efficacement leurs risques.
+	\item \textbf{Soins de santé :} En matière de soins de santé, l'utilisation de ces techniques permet d'analyser de grandes quantités de données médicales, telles que les dossiers des patients, les résultats d'analyses et les données génomiques. Cela permet d'améliorer la personnalisation des traitements, la détection précoce de maladies, la gestion des ressources hospitalières et la recherche médicale.
+	\item \textbf{Marketing :} Les entreprises utilisent ces avancées pour analyser les données clients, les comportements d'achat, les interactions sur les réseaux sociaux, etc. Cela leur permet de mieux cibler leurs campagnes marketing, de personnaliser les offres et les recommandations produits, et d'optimiser leurs stratégies de tarification.
+\end{enumerate}
+
 
 \clearpage 
 \section{Analyse critique du travail proposé}
@@ -191,17 +155,9 @@ Ce magnifique projet nous a permis -- outre de nous familiariser avec \LaTeX{} -
 \bigskip\noindent{\Large\bf Annexes}
 \addcontentsline{toc}{section}{Annexes}
 \section{Algorithme qui fait quelque chose}
-\begin{minted}{c}
-#include<stdio.h>
 
-int main()
-{
-	printf("Hello World !\n);
-	return 0;
-}
-\end{minted}
 
 \clearpage 
 \section{Une autre annexe}
-
+\cite{DH76}
 \end{document}
