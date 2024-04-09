@@ -1,15 +1,57 @@
 % This file was created with JabRef 2.10b2.
 % Encoding: UTF-8
 
+@article{10.1145/3277006.3277013,
+author = {Luo, Shangyu and Gao, Zekai J. and Gubanov, Michael and Perez, Luis L. and Jermaine, Christopher},
+title = {Scalable Linear Algebra on a Relational Database System},
+year = {2018},
+issue_date = {March 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {47},
+number = {1},
+issn = {0163-5808},
+url = {https://doi.org/10.1145/3277006.3277013},
+doi = {10.1145/3277006.3277013},
+abstract = {Scalable linear algebra is important for analytics and machine learning (including deep learning). In this paper, we argue that a parallel or distributed database system is actually an excellent platform upon which to build such functionality. Most relational systems already have support for cost-based optimization-which is vital to scaling linear algebra computations-and it is well-known how to make relational systems scale. We show that by making just a few changes to a parallel/distributed relational database system, such a system can be a competitive platform for scalable linear algebra. Our results suggest that brand new systems supporting scalable linear algebra are not absolutely necessary, and that such systems could instead be built on top of existing relational technology.},
+journal = {SIGMOD Rec.},
+month = {sep},
+pages = {24–31},
+numpages = {8}
+}
 
+@inproceedings{10.1145/3452021.3458314,
+author = {Geerts, Floris and Mu\~{n}oz, Thomas and Riveros, Cristian and Vrgo\v{c}, Domagoj},
+title = {Expressive Power of Linear Algebra Query Languages},
+year = {2021},
+isbn = {9781450383813},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3452021.3458314},
+doi = {10.1145/3452021.3458314},
+abstract = {Linear algebra algorithms often require some sort of iteration or recursion as is illustrated by standard algorithms for Gaussian elimination, matrix inversion, and transitive closure. A key characteristic shared by these algorithms is that they allow looping for a number of steps that is bounded by the matrix dimension. In this paper we extend the matrix query language MATLANG with this type of recursion, and show that this suffices to express classical linear algebra algorithms. We study the expressive power of this language and show that it naturally corresponds to arithmetic circuit families, which are often said to capture linear algebra. Furthermore, we analyze several sub-fragments of our language, and show that their expressive power is closely tied to logical formalisms on semiring-annotated relations.},
+booktitle = {Proceedings of the 40th ACM SIGMOD-SIGACT-SIGAI Symposium on Principles of Database Systems},
+pages = {342–354},
+numpages = {13},
+keywords = {circuit complexity, complexity, linear algebra, query languages},
+location = {<conf-loc>, <city>Virtual Event</city>, <country>China</country>, </conf-loc>},
+series = {PODS'21}
+}
 
-@article{DH76,
-  title={New directions in cryptography},
-  author={Diffie, Whitfield and Hellman, Martin},
-  journal={IEEE transactions on Information Theory},
-  volume={22},
-  number={6},
-  pages={644--654},
-  year={1976},
-  publisher={IEEE}
+@article{10.14778/3450980.3450991,
+author = {Jankov, Dimitrije and Yuan, Binhang and Luo, Shangyu and Jermaine, Chris},
+title = {Distributed numerical and machine learning computations via two-phase execution of aggregated join trees},
+year = {2021},
+issue_date = {March 2021},
+publisher = {VLDB Endowment},
+volume = {14},
+number = {7},
+issn = {2150-8097},
+url = {https://doi.org/10.14778/3450980.3450991},
+doi = {10.14778/3450980.3450991},
+abstract = {When numerical and machine learning (ML) computations are expressed relationally, classical query execution strategies (hash-based joins and aggregations) can do a poor job distributing the computation. In this paper, we propose a two-phase execution strategy for numerical computations that are expressed relationally, as aggregated join trees (that is, expressed as a series of relational joins followed by an aggregation). In a pilot run, lineage information is collected; this lineage is used to optimally plan the computation at the level of individual records. Then, the computation is actually executed. We show experimentally that a relational system making use of this two-phase strategy can be an excellent platform for distributed ML computations.},
+journal = {Proc. VLDB Endow.},
+month = {mar},
+pages = {1228–1240},
+numpages = {13}
 }
